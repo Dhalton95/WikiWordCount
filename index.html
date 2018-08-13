@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.sound.min.js"></script>
+    <script src="WikiScraper.js"></script>
+    <link rel="stylesheet" type="text/css">
+  <style> body {padding: 0; margin: 0;} </style>
+  </head>
+  <body>
+      <div>
+        <h2>Enter word to scrape Wikipedia data</h2>
+        <span>Word: </span>
+        <input id='input' />
+        <button onClick='scrapeWiki()'>Scrape!</button>
+        <div>
+          <h3 id='contentsLabel' style='padding: 15px; border-bottom: 1px dotted #494949;'>Latest Search Contents:</h3>
+          <div id='contents' style='padding-left: 25px;'>
+            <h4 id='randomPageLabel'></h4>
+            <div>
+              <textarea id='randomPageContents' hidden='true' readonly='true'
+                        style='height: 300px; width:600px'></textarea>
+            </div>
+          </div>
+          <h3 id='contentsResultsLabel' style='padding: 15px; border-bottom: 1px dotted #494949;'>Latest Search Results (Top 10):</h3>
+          <div id='contentsResults' style='padding: 25px;'></div>
+        </div>
+      </div>
+      <div>
+        <h3 id='resultsLabel' style='padding: 15px; border-bottom: 1px dotted #494949;'>Total Results (Top 10):</h3>
+        <div id='results' style='padding: 25px;'></div>
+      </div>
+  </body>
+</html>
